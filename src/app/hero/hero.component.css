@@ -1,0 +1,386 @@
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding-top: 100px;
+}
+
+.particle {
+    min-width: 5px;
+    min-height: 5px;
+}
+
+.hero-wrapper {
+    display: grid;
+    grid-template-columns: 1.2fr 0.9fr;
+    align-items: center;
+    gap: 50px;
+}
+
+/* Badge */
+.greeting-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(0, 255, 136, 0.1);
+    padding: 8px 20px;
+    border-radius: 30px;
+    border: 1px solid var(--primary-color);
+    margin-bottom: 25px;
+    font-size: 0.95rem;
+    color: var(--primary-color);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.greeting-badge .dot {
+    width: 8px;
+    height: 8px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--primary-color);
+    animation: blink 2s infinite;
+}
+
+.name {
+    font-size: 5rem;
+    line-height: 1.1;
+    margin-bottom: 10px;
+    background: linear-gradient(to right, #fff, #bbb);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.role {
+    font-size: 3.5rem;
+    color: var(--text-light);
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.text-stroke {
+    -webkit-text-stroke: 1px var(--secondary-color);
+    color: transparent;
+}
+
+.bio {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    max-width: 550px;
+    margin-bottom: 40px;
+    line-height: 1.8;
+}
+
+.cta-group {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.social-mini {
+    display: flex;
+    gap: 20px;
+}
+
+.social-mini a {
+    width: 45px;
+    height: 45px;
+    border: 1px solid var(--glass-border);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-muted);
+    transition: var(--transition);
+}
+
+.social-mini a:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    box-shadow: 0 0 15px rgba(0, 255, 136, 0.2);
+}
+
+/* Right Side - Reference Profile Card */
+.hero-right {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.ref-profile-card {
+    position: relative;
+    width: 320px;
+    height: 420px;
+    z-index: 10;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    background: #151515;
+    /* Darker base */
+    border-radius: 40px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Dot Grid Pattern Overlay */
+.grid-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+    opacity: 0.5;
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Tech Frame Overlay */
+.card-inner::after {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.ref-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.95) contrast(1.1);
+    /* Slight pop */
+    position: relative;
+    z-index: 1;
+    /* Below grid */
+}
+
+/* Orbit Ring */
+.orbit-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 85%;
+    height: 85%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    /* Only works if container is square-ish, or just large rounded rect */
+    /* Since card is rect, let's make it a large faint circle or ellipse */
+    border-radius: 35px;
+    /* Match inner card slightly */
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 3;
+}
+
+.orbit-dot {
+    position: absolute;
+    top: -4px;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--primary-color);
+    animation: orbit-travel 8s linear infinite;
+    offset-path: rect(0% 100% 100% 0% round 35px);
+    /* Experimental, simplified fallback below */
+}
+
+/* Fallback simple rotation if offset-path tricky with non-standard shapes */
+.orbit-ring {
+    border: 1px dashed rgba(255, 255, 255, 0.15);
+    animation: spin-slow 20s linear infinite;
+}
+
+@keyframes spin-slow {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* Code Badge */
+.code-badge {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 8px 16px;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 255, 136, 0.3);
+    color: var(--primary-color);
+    font-family: 'Fira Code', monospace;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    z-index: 25;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    animation: float 4s ease-in-out infinite alternate;
+}
+
+/* Floating Badges - UNIFORM SIZE */
+.float-badge {
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    /* Uniform Size */
+    background: #1a1a1a;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 20;
+    transition: var(--transition);
+}
+
+.float-badge:hover {
+    transform: scale(1.1);
+    border-color: var(--primary-color);
+}
+
+.badge-py {
+    top: 40px;
+    left: -25px;
+    color: #ffe873;
+    animation: float 5s infinite ease-in-out;
+}
+
+.badge-term {
+    bottom: 50px;
+    right: -25px;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    border-radius: 50%;
+    /* Keep circular for terminal */
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    border-color: var(--primary-color);
+    animation: float 7s infinite ease-in-out 0.5s;
+}
+
+.glow-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120%;
+    height: 120%;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0, 255, 136, 0.1), transparent 70%);
+    filter: blur(40px);
+    z-index: -1;
+    animation: pulse 4s infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 0.5;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    50% {
+        opacity: 0.8;
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-wrapper {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .greeting-badge {
+        margin: 0 auto 25px;
+    }
+
+    .cta-group {
+        justify-content: center;
+    }
+
+    .ref-profile-card {
+        width: 280px;
+        height: 380px;
+    }
+
+    .badge-py {
+        left: -10px;
+    }
+
+    .badge-react {
+        right: -10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .name {
+        font-size: 2.8rem;
+        text-align: center;
+    }
+
+    .role {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .bio {
+        font-size: 1rem;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero {
+        padding-top: 80px;
+        padding-bottom: 90px;
+        /* Added significant gap */
+    }
+
+    .ref-profile-card {
+        width: 280px;
+        height: 360px;
+        /* Slightly smaller height */
+        margin: 0 auto;
+    }
+
+    .cta-group {
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,45 @@
+<section id="experience" class="section">
+    <div class="bg-circuit"></div>
+    <div class="container">
+        <div class="section-header">
+            <h2>Experience <span class="text-primary">Log</span></h2>
+        </div>
+
+        <div class="tech-tree">
+            <div class="tree-trunk"></div>
+
+            <div class="tree-node" *ngFor="let exp of experiences; let i = index" [class.inverse]="i % 2 !== 0">
+                <!-- Icon Node on Trunk -->
+                <div class="node-icon">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+
+                <div class="node-card">
+                    <div class="card-header">
+                        <div class="role-icon">
+                            <i class="fas fa-code-branch"></i>
+                        </div>
+                        <div>
+                            <h3>{{ exp.title }}</h3>
+                            <span class="company">{{ exp.company }}</span>
+                        </div>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="date-badge"><i class="far fa-calendar-alt"></i> {{ exp.date }}</div>
+                        <ul>
+                            <li *ngFor="let desc of exp.description">{{ desc }}</li>
+                        </ul>
+                    </div>
+
+                    <div class="card-footer">
+                        <!-- Fake tech stack tags for visual interest -->
+                        <span class="tag">dev</span>
+                        <span class="tag">deploy</span>
+                        <span class="tag">scale</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

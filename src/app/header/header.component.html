@@ -1,0 +1,19 @@
+<header [class.scrolled]="isScrolled">
+    <div class="glass-bg"></div>
+    <nav class="container">
+        <a href="#" class="logo">ARJUN<span class="dot">.</span><span class="suffix">MS</span></a>
+
+        <div class="nav-links" [class.active]="menuOpen">
+            <ul>
+                <li><a href="#home" (click)="toggleMenu()" class="nav-link">Home</a></li>
+                <li><a href="#about" (click)="toggleMenu()" class="nav-link">Skills</a></li>
+                <li><a href="#experience" (click)="toggleMenu()" class="nav-link">Experience</a></li>
+                <li><a href="#footer" (click)="toggleMenu()" class="nav-btn">Contact Me</a></li>
+            </ul>
+        </div>
+
+        <div class="hamburger-menu" (click)="toggleMenu()">
+            <div class="bar" [class.animate]="menuOpen"></div>
+        </div>
+    </nav>
+</header>

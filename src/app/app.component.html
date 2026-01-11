@@ -1,0 +1,33 @@
+<!-- Preloader -->
+<div class="preloader" *ngIf="loading">
+  <div class="loader-content">
+    <div class="loader-core">
+      <span>&lt;/&gt;</span>
+    </div>
+    <!-- Orbiting Icons (PNGs) -->
+    <div class="orbit-icon icon-py">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" width="24">
+    </div>
+    <div class="orbit-icon icon-react">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" width="24">
+    </div>
+    <div class="orbit-icon icon-ang">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" alt="Angular"
+        width="24">
+    </div>
+    <div class="orbit-icon icon-pg">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL"
+        width="24">
+    </div>
+  </div>
+</div>
+
+<div class="app-content" [class.visible]="!loading">
+  <app-header></app-header>
+  <main>
+    <app-hero></app-hero>
+    <app-about></app-about>
+    <app-experience></app-experience>
+  </main>
+  <app-footer></app-footer>
+</div>

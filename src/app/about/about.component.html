@@ -1,0 +1,64 @@
+<section id="about" class="section">
+    <div class="container relative-container">
+
+        <!-- Tech Shapes Background -->
+        <div class="tech-shape shape-1"></div>
+        <div class="tech-shape shape-2"></div>
+
+        <div class="section-header">
+            <span class="subtitle">My Expertise</span>
+            <h2>Skills & <span class="text-primary">Capabilities</span></h2>
+        </div>
+
+        <div class="prof-brief">
+            <div class="brief-icon">
+                <i class="fas fa-user-astronaut"></i>
+            </div>
+            <div class="brief-content">
+                <h3>Professional Summary</h3>
+                <p>
+                    I am a passionate software developer with a focus on building scalable web applications.
+                    With expertise in both frontend and backend technologies, I create seamless digital experiences
+                    that solve complex business problems. My approach combines technical precision with creative design
+                    thinking.
+                </p>
+            </div>
+        </div>
+
+        <div class="about-grid">
+            <div class="about-info">
+                <h3>More than just code.</h3>
+                <p>
+                    I interpret business problems into technical solutions. With a strong foundation in Computer Science
+                    and full-stack development,
+                    I bridge the gap between complex backend logic and intuitive frontend design.
+                </p>
+
+                <!-- NEW STATS BLOCK -->
+                <div class="stats-block">
+                    <div class="stat-item">
+                        <span class="stat-num">2+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-num">15+</span>
+                        <span class="stat-label">Projects Completed</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="skills-wrapper">
+                <!-- Icon Grid -->
+                <div class="skill-card" *ngFor="let skill of skills">
+                    <div class="skill-icon">
+                        <img *ngIf="skill.useImage" [src]="skill.imagePath" [alt]="skill.name" class="img-icon">
+                        <i *ngIf="!skill.useImage" [class]="skill.icon"></i>
+                    </div>
+                    <h4>{{ skill.name }}</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

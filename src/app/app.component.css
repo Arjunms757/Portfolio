@@ -1,4 +1,3 @@
-/* Preloader Styles */
 .preloader {
     position: fixed;
     top: 0;
@@ -95,7 +94,6 @@
     }
 }
 
-/* App Content Transition */
 .app-content {
     opacity: 0;
     transition: opacity 1s ease;

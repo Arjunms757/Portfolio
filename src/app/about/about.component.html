@@ -1,7 +1,6 @@
 <section id="about" class="section">
     <div class="container relative-container">
 
-        <!-- Tech Shapes Background -->
         <div class="tech-shape shape-1"></div>
         <div class="tech-shape shape-2"></div>
 
@@ -17,10 +16,13 @@
             <div class="brief-content">
                 <h3>Professional Summary</h3>
                 <p>
-                    I am a passionate software developer with a focus on building scalable web applications.
-                    With expertise in both frontend and backend technologies, I create seamless digital experiences
-                    that solve complex business problems. My approach combines technical precision with creative design
-                    thinking.
+                    Hi, I'm Arjun. I build ideas into powerful digital experiences. As a passionate software developer,
+                    I specialize in creating scalable, high-performance web applications that blend clean engineering
+                    with thoughtful design. From crafting intuitive front-end interfaces to building reliable back-end
+                    systems, I enjoy shaping products end to end. I also handle deployments, servers, and CI/CD
+                    pipelines, ensuring every release is smooth, secure, and production-ready. Whether leading a team,
+                    mentoring developers, or owning a project from concept to launch, I focus on delivering solutions
+                    that are not just functional—but impactful, intuitive, and user-centric.
                 </p>
             </div>
         </div>
@@ -34,7 +36,6 @@
                     I bridge the gap between complex backend logic and intuitive frontend design.
                 </p>
 
-                <!-- NEW STATS BLOCK -->
                 <div class="stats-block">
                     <div class="stat-item">
                         <span class="stat-num">2+</span>
@@ -46,11 +47,9 @@
                         <span class="stat-label">Projects Completed</span>
                     </div>
                 </div>
-
             </div>
 
             <div class="skills-wrapper">
-                <!-- Icon Grid -->
                 <div class="skill-card" *ngFor="let skill of skills">
                     <div class="skill-icon">
                         <img *ngIf="skill.useImage" [src]="skill.imagePath" [alt]="skill.name" class="img-icon">

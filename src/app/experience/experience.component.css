@@ -4,7 +4,7 @@
 
 .tech-tree {
     position: relative;
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 20px 0;
 }
@@ -27,7 +27,6 @@
     padding-right: 50%;
     position: relative;
     margin-bottom: 120px;
-    /* Increased margin again */
 }
 
 .tree-node.inverse {
@@ -36,7 +35,6 @@
     padding-left: 50%;
 }
 
-/* Central Icon */
 .node-icon {
     position: absolute;
     right: -25px;
@@ -59,21 +57,17 @@
     left: -25px;
 }
 
-/* Card Style - INCREASED SIZE */
 .node-card {
     width: 90%;
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid var(--glass-border);
     border-radius: 25px;
-    /* Larger radius */
     padding: 40px;
-    /* Increased padding */
     margin-right: 60px;
     position: relative;
     transition: var(--transition);
     overflow: hidden;
     min-height: 250px;
-    /* Increased min height */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -104,7 +98,6 @@
     display: flex;
     align-items: center;
     gap: 25px;
-    /* Gap */
     margin-bottom: 30px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     padding-bottom: 25px;
@@ -113,7 +106,6 @@
 .role-icon {
     width: 60px;
     height: 60px;
-    /* Larger icon */
     background: rgba(0, 255, 136, 0.1);
     border-radius: 15px;
     display: flex;
@@ -125,7 +117,6 @@
 
 .card-header h3 {
     font-size: 1.8rem;
-    /* Larger font */
     margin: 0;
     color: var(--text-light);
 }
@@ -157,7 +148,6 @@
     margin-bottom: 15px;
     color: #e0e0e0;
     font-size: 1.15rem;
-    /* Larger text */
     line-height: 1.7;
 }
 
@@ -221,16 +211,12 @@
         padding-left: 0;
     }
 
-    /* Redesign: Thinner, subtler line for mobile */
     .tree-trunk {
         left: 20px;
         width: 1px;
-        /* Much thinner */
         transform: translateX(0);
         background: rgba(255, 255, 255, 0.15);
-        /* Subtle non-gradient line */
         box-shadow: none;
-        /* Remove glow for cleaner look */
     }
 
     .tree-node,
@@ -243,11 +229,9 @@
         justify-content: flex-start;
     }
 
-    /* Smaller Icons for Mobile */
     .node-icon,
     .tree-node.inverse .node-icon {
         left: 3px;
-        /* Align with thinner line (20px left + 1px center ≈ 20px) */
         right: auto;
         width: 34px;
         height: 34px;
@@ -267,7 +251,6 @@
 
     .node-card::before {
         display: none;
-        /* Remove the side bar on card for mobile to save space */
     }
 
     .card-header {
@@ -282,7 +265,6 @@
         width: 40px;
         height: 40px;
         font-size: 1.2rem;
-        /* Smaller role icon */
         border-radius: 10px;
     }
 

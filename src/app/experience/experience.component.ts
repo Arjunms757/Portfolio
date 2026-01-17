@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./experience.component.css']
 })
 export class ExperienceComponent {
+
   experiences = [
     {
       title: 'Full Stack Developer',
@@ -16,7 +17,8 @@ export class ExperienceComponent {
         'Engineered high-performance RESTful APIs and integrated secure payment gateways, boosting transaction reliability.',
         'Developed a cruise booking portal with complex state management, ensuring a seamless user booking experience.',
         'Optimized database queries and backend logic in Python/Django, reducing API response times significantly.'
-      ]
+      ],
+      tags: ['Django', 'Angular', 'TypeScript', 'PostgreSQL']
     },
     {
       title: 'Front-End Developer Intern',
@@ -26,7 +28,8 @@ export class ExperienceComponent {
         'Transformed high-fidelity Figma designs into pixel-perfect React.js components with 100% responsiveness.',
         'Collaborated with backend teams to integrate APIs and resolve cross-origin issues.',
         'Implemented modern UI/UX principles, enhancing user engagement and accessibility standards.'
-      ]
+      ],
+      tags: ['React JS', 'HTML5', 'CSS', 'Bootstrap']
     },
     {
       title: 'Software Developer Intern',
@@ -36,7 +39,8 @@ export class ExperienceComponent {
         'Developed robust Python scripts for data processing and backend automation.',
         'Gained hands-on proficiency in Flask and Django frameworks for rapid web application development.',
         'Contributed to the development of reusable code libraries used across multiple projects.'
-      ]
+      ],
+      tags: ['Python', 'Flask', 'Django', 'HTML5']
     }
   ];
 }

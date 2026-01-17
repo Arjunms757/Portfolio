@@ -1,5 +1,4 @@
 footer {
-    /* margin-top: 60px; */
     position: relative;
     overflow: hidden;
 }
@@ -11,7 +10,6 @@ footer {
     z-index: 10;
 }
 
-/* Compact CTA (Clean) */
 @keyframes float {
     0% {
         transform: translateY(0px);
@@ -57,7 +55,6 @@ footer {
     }
 }
 
-/* Compact CTA (Clean) */
 .network-cta-container {
     background: linear-gradient(145deg, #0a0a0a, #050505);
     border: 1px solid rgba(255, 255, 255, 0.05);
@@ -71,7 +68,6 @@ footer {
 
 .network-cta-container:hover {
     animation-play-state: paused;
-    /* Pause subtle animation on hover */
     transform: translateY(-5px);
     box-shadow:
         0 30px 60px -12px rgba(0, 0, 0, 0.8),
@@ -219,7 +215,6 @@ footer {
 .social-links-vertical a i {
     transition: 0.3s;
     color: var(--text-light);
-    /* Default icon color */
 }
 
 .social-links-vertical a:hover i {
@@ -285,7 +280,6 @@ footer {
         padding: 30px 20px;
     }
 
-    /* Force Vertical Stack */
     .cta-content-compact {
         flex-direction: column;
         gap: 20px;

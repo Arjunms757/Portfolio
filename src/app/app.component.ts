@@ -9,7 +9,6 @@ export class AppComponent implements OnInit {
   loading = true;
 
   ngOnInit() {
-    // Simulate loading time
     setTimeout(() => {
       this.loading = false;
       window.scrollTo(0, 0);

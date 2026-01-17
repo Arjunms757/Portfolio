@@ -9,7 +9,6 @@
             <div class="tree-trunk"></div>
 
             <div class="tree-node" *ngFor="let exp of experiences; let i = index" [class.inverse]="i % 2 !== 0">
-                <!-- Icon Node on Trunk -->
                 <div class="node-icon">
                     <i class="fas fa-briefcase"></i>
                 </div>
@@ -33,11 +32,11 @@
                     </div>
 
                     <div class="card-footer">
-                        <!-- Fake tech stack tags for visual interest -->
-                        <span class="tag">dev</span>
-                        <span class="tag">deploy</span>
-                        <span class="tag">scale</span>
+                        <span class="tag" *ngFor="let tag of exp.tags">
+                            {{ tag }}
+                        </span>
                     </div>
+
                 </div>
             </div>
         </div>

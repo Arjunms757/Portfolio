@@ -11,7 +11,6 @@ header.scrolled {
     top: 0;
 }
 
-/* Glassmorphism Panel */
 nav {
     display: flex;
     justify-content: space-between;
@@ -23,9 +22,7 @@ nav {
     padding: 15px 30px;
     border-radius: 50px;
     max-width: 1200px;
-    /* Constrain width */
     margin: 0 auto;
-    /* Center it */
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
@@ -106,7 +103,6 @@ header.scrolled nav {
     box-shadow: 0 0 15px rgba(0, 255, 136, 0.4);
 }
 
-/* Hamburger Menu */
 .hamburger-menu {
     display: none;
     cursor: pointer;
@@ -144,7 +140,6 @@ header.scrolled nav {
     top: 8px;
 }
 
-/* Hamburger Animation */
 .bar.animate {
     background: transparent;
 }
@@ -186,8 +181,6 @@ header.scrolled nav {
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
         display: block;
         padding: 30px 0;
-
-        /* Animation States */
         opacity: 0;
         visibility: hidden;
         transform: translateY(-20px);

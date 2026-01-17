@@ -1,10 +1,8 @@
 .relative-container {
     position: relative;
     padding-top: 0;
-    /* Minimized top pad */
 }
 
-/* Tech Shapes */
 .tech-shape {
     position: absolute;
     border: 2px solid rgba(255, 255, 255, 0.05);
@@ -51,7 +49,6 @@
 .section-header {
     text-align: center;
     margin-bottom: 40px;
-    /* REDUCED to close gap with Hero */
 }
 
 .subtitle {
@@ -62,11 +59,9 @@
     font-weight: 600;
 }
 
-/* Professional Brief - Stylish */
 .prof-brief {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto 140px;
-    /* INCREASED to create bigger gap below */
     padding: 40px;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.03), transparent);
     border: 1px solid var(--glass-border);
@@ -108,14 +103,12 @@
     grid-template-columns: 1fr 1fr;
     gap: 80px;
     align-items: start;
-    /* Ensures top alignment */
 }
 
 .about-info {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    /* Explicit top alignment */
 }
 
 .about-info h3 {
@@ -130,7 +123,6 @@
     margin-bottom: 40px;
 }
 
-/* Stats Block */
 .stats-block {
     display: flex;
     align-items: center;
@@ -169,13 +161,11 @@
     background: rgba(255, 255, 255, 0.1);
 }
 
-/* Skills Grid */
 .skills-wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
     align-content: flex-start;
-    /* Ensure grid starts at top */
 }
 
 .skill-card {
@@ -210,7 +200,6 @@
     object-fit: contain;
 }
 
-/* Brand Colors for Icons */
 .fa-js {
     color: #f7df1e;
 }
@@ -280,7 +269,6 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
-    /* Ensure gap from previous section */
     :host {
         display: block;
         padding-top: 10px;
@@ -306,6 +294,5 @@
     .shape-1,
     .shape-2 {
         opacity: 0.3;
-        /* Fade bg shapes on mobile */
     }
 }

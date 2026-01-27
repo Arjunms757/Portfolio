@@ -295,6 +295,41 @@
     .hero-wrapper {
         grid-template-columns: 1fr;
         text-align: center;
+        gap: 30px;
+    }
+
+    .hero {
+        min-height: auto;
+        height: auto;
+        padding-top: 120px;
+        padding-bottom: 60px;
+        display: block;
+    }
+
+    /* Fix for tablet / desktop site on mobile */
+    .hero-left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .name {
+        font-size: 4rem;
+        /* Reduce from 5rem */
+        text-align: center;
+    }
+
+    .role {
+        font-size: 2.8rem;
+        /* Reduce from 3.5rem */
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    .bio {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
     }
 
     .greeting-badge {

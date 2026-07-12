@@ -259,3 +259,14 @@ h3 {
   pointer-events: none;
   z-index: 0;
 }
+
+/* Custom Additions */
+.highlight {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.glow-btn {
+  box-shadow: 0 0 15px rgba(0, 255, 136, 0.25);
+  animation: glow 3s infinite;
+}

@@ -9,55 +9,64 @@
             <h2>Skills & <span class="text-primary">Capabilities</span></h2>
         </div>
 
-        <div class="prof-brief">
-            <div class="brief-icon">
-                <i class="fas fa-user-astronaut"></i>
+        <div class="about-top-grid">
+            <div class="prof-brief">
+                <div class="brief-icon">
+                    <i class="fas fa-user-astronaut"></i>
+                </div>
+                <div class="brief-content">
+                    <h3>Professional Summary</h3>
+                    <p>
+                        Highly analytical Project Delivery Engineer and Full Stack Software Engineer with 3+ years of professional experience architecting, developing, and deploying scalable enterprise web applications. Proven core competency in Backend Engineering using Python, Django, and Django REST Framework (DRF) alongside robust Frontend Development using Angular and React.js. Demonstrated success managing the end-to-end Software Development Lifecycle (SDLC), translating business requirements into technical specifications, and driving cross-functional development sprints. Expert in database optimization using PostgreSQL and Redis, cloud management via AWS Cloud Services, and implementing highly secure software solutions to ensure business continuity and platform stability.
+                    </p>
+                </div>
             </div>
-            <div class="brief-content">
-                <h3>Professional Summary</h3>
-                <p>
-                    Hi, I'm Arjun. I build ideas into powerful digital experiences. As a passionate software developer,
-                    I specialize in creating scalable, high-performance web applications that blend clean engineering
-                    with thoughtful design. From crafting intuitive front-end interfaces to building reliable back-end
-                    systems, I enjoy shaping products end to end. I also handle deployments, servers, and CI/CD
-                    pipelines, ensuring every release is smooth, secure, and production-ready. Whether leading a team,
-                    mentoring developers, or owning a project from concept to launch, I focus on delivering solutions
-                    that are not just functional—but impactful, intuitive, and user-centric.
-                </p>
-            </div>
-        </div>
 
-        <div class="about-grid">
-            <div class="about-info">
+            <div class="about-info-card">
                 <h3>More than just code.</h3>
                 <p>
                     I interpret business problems into technical solutions. With a strong foundation in Computer Science
-                    and full-stack development,
-                    I bridge the gap between complex backend logic and intuitive frontend design.
+                    and full-stack development, I bridge the gap between complex backend logic and intuitive frontend design.
                 </p>
 
                 <div class="stats-block">
                     <div class="stat-item">
-                        <span class="stat-num">2+</span>
+                        <span class="stat-num">3+</span>
                         <span class="stat-label">Years Experience</span>
                     </div>
                     <div class="stat-divider"></div>
                     <div class="stat-item">
-                        <span class="stat-num">15+</span>
+                        <span class="stat-num">20+</span>
                         <span class="stat-label">Projects Completed</span>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div class="skills-wrapper">
-                <div class="skill-card" *ngFor="let skill of skills">
-                    <div class="skill-icon">
-                        <img *ngIf="skill.useImage" [src]="skill.imagePath" [alt]="skill.name" class="img-icon">
-                        <i *ngIf="!skill.useImage" [class]="skill.icon"></i>
+        <div class="skills-section-header">
+            <h3>Technical Toolkit</h3>
+            <p>A comprehensive overview of technologies and methodologies I specialize in.</p>
+        </div>
+
+        <div class="skills-categories-grid">
+            <div class="category-card" *ngFor="let cat of skillCategories">
+                <div class="category-header">
+                    <div class="cat-icon-wrapper">
+                        <i [class]="cat.icon" class="cat-icon"></i>
                     </div>
-                    <h4>{{ skill.name }}</h4>
+                    <h4>{{ cat.title }}</h4>
+                </div>
+                <div class="category-skills">
+                    <div class="skill-badge" *ngFor="let skill of cat.skills">
+                        <span class="skill-badge-icon">
+                            <img *ngIf="skill.useImage" [src]="skill.imagePath" [alt]="skill.name" class="img-icon-badge">
+                            <i *ngIf="!skill.useImage" [class]="skill.icon"></i>
+                        </span>
+                        <span class="skill-badge-name">{{ skill.name }}</span>
+                    </div>
                 </div>
             </div>
         </div>
+
     </div>
 </section>

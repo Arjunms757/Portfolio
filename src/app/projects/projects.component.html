@@ -1,0 +1,33 @@
+<section id="projects" class="section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Key <span class="text-primary">Projects</span></h2>
+        </div>
+
+        <div class="projects-grid">
+            <div class="project-card" *ngFor="let proj of projects" [ngClass]="proj.colorClass">
+                <div class="project-card-header">
+                    <div class="project-icon-wrapper">
+                        <i [class]="proj.icon"></i>
+                    </div>
+                    <span class="project-type">{{ proj.type }}</span>
+                </div>
+
+                <div class="project-card-body">
+                    <h3>{{ proj.title }}</h3>
+                    <ul>
+                        <li *ngFor="let bullet of proj.description">{{ bullet }}</li>
+                    </ul>
+                </div>
+
+                <div class="project-card-footer">
+                    <div class="tech-tags">
+                        <span class="tech-tag" *ngFor="let tech of proj.techStack">
+                            {{ tech }}
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

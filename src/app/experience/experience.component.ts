@@ -42,7 +42,7 @@ export class ExperienceComponent {
       tags: ['Python', 'Django', 'PostgreSQL', 'Redis Caching', 'AWS Cloud', 'REST APIs']
     },
     {
-      title: 'Front-End Developer Intern',
+      title: 'Front-End Developer',
       company: 'NTH Index Software Solutions LLP',
       date: 'Jan 2023 - Aug 2023',
       description: [

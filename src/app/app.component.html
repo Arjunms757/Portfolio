@@ -1,27 +1,40 @@
-<div class="preloader" *ngIf="loading">
-  <div class="loader-content">
-    <div class="loader-core">
-      <span>&lt;/&gt;</span>
+<div class="preloader" *ngIf="loading" [class.fading-out]="isFadingOut">
+  <div class="preloader-ambient-glow"></div>
+
+  <div class="minimal-loader-container">
+    <!-- Sequential Skill Icons Row (Appearing as progress increases) -->
+    <div class="skills-progress-row">
+      <div 
+        class="skill-node" 
+        *ngFor="let skill of skills"
+        [class.active]="progress >= skill.threshold"
+        [style.--skill-color]="skill.color"
+        [style.--skill-glow]="skill.glow"
+        [attr.title]="skill.name">
+        <div class="skill-icon-wrapper" *ngIf="progress >= skill.threshold">
+          <img [src]="skill.icon" [alt]="skill.name" width="24" height="24">
+        </div>
+      </div>
     </div>
-    <div class="orbit-icon icon-py">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" width="24">
+
+    <!-- Telemetry Status Message -->
+    <div class="loader-telemetry">
+      <span class="prompt-arrow">&gt;</span>
+      <span class="status-message">{{ statusText }}</span>
+      <span class="cursor-blink">_</span>
     </div>
-    <div class="orbit-icon icon-react">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" width="24">
+
+    <!-- Progress Bar -->
+    <div class="progress-bar-container">
+      <div class="progress-bar-fill" [style.width.%]="progress">
+        <div class="progress-glow-head"></div>
+      </div>
     </div>
-    <div class="orbit-icon icon-ang">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" alt="Angular"
-        width="24">
-    </div>
-    <div class="orbit-icon icon-pg">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL"
-        width="24">
-    </div>
-    <div class="orbit-icon icon-git">
-      <img src="assets/git.svg" alt="Git" width="24">
-    </div>
-    <div class="orbit-icon icon-aws">
-      <img src="assets/aws.svg" alt="AWS" width="26">
+
+    <!-- Progress Meta Info -->
+    <div class="progress-meta">
+      <span class="progress-label">INITIALIZING ECOSYSTEM</span>
+      <span class="progress-pct">{{ progress }}%</span>
     </div>
   </div>
 </div>

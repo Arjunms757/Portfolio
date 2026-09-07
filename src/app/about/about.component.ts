@@ -25,8 +25,8 @@ export class AboutComponent {
       title: 'Languages & Systems',
       icon: 'fas fa-terminal',
       skills: [
-        { name: 'Python', useImage: true, imagePath: 'assets/python.png' },
-        { name: 'TypeScript', useImage: true, imagePath: 'assets/ts-icon.png' },
+        { name: 'Python', useImage: true, imagePath: 'assets/python.svg' },
+        { name: 'TypeScript', useImage: true, imagePath: 'assets/typescript.svg' },
         { name: 'JavaScript', icon: 'fab fa-js-square' },
         { name: 'SQL', icon: 'fas fa-database' },
         { name: 'Linux', icon: 'fab fa-linux' }
@@ -36,7 +36,7 @@ export class AboutComponent {
       title: 'Backend Architecture',
       icon: 'fas fa-server',
       skills: [
-        { name: 'Django', useImage: true, imagePath: 'assets/django.png' },
+        { name: 'Django', useImage: true, imagePath: 'assets/django.svg' },
         { name: 'Django REST Framework', icon: 'fas fa-cogs' },
         { name: 'Flask', icon: 'fas fa-flask' },
         { name: 'Celery Task Queues', icon: 'fas fa-tasks' },
@@ -47,32 +47,32 @@ export class AboutComponent {
       title: 'Frontend Engineering',
       icon: 'fas fa-laptop-code',
       skills: [
-        { name: 'Angular', icon: 'fab fa-angular' },
-        { name: 'React.js', icon: 'fab fa-react' },
+        { name: 'Angular', useImage: true, imagePath: 'assets/angular.svg' },
+        { name: 'React.js', useImage: true, imagePath: 'assets/react.svg' },
         { name: 'HTML5', icon: 'fab fa-html5' },
         { name: 'CSS3', icon: 'fab fa-css3-alt' },
-        { name: 'Tailwind CSS', useImage: true, imagePath: 'assets/Tailwind CSS.png' },
+        { name: 'Tailwind CSS', useImage: true, imagePath: 'assets/tailwind.svg' },
         { name: 'Bootstrap', icon: 'fab fa-bootstrap' },
-        { name: 'Figma', useImage: true, imagePath: 'assets/figma.png' }
+        { name: 'Figma', useImage: true, imagePath: 'assets/figma.svg' }
       ]
     },
     {
       title: 'Data Management',
       icon: 'fas fa-hdd',
       skills: [
-        { name: 'PostgreSQL', useImage: true, imagePath: 'assets/postgres.png' },
+        { name: 'PostgreSQL', useImage: true, imagePath: 'assets/postgresql.svg' },
         { name: 'Redis Caching', icon: 'fas fa-bolt' },
-        { name: 'MySQL', useImage: true, imagePath: 'assets/mysql.png' }
+        { name: 'MySQL', useImage: true, imagePath: 'assets/mysql.svg' }
       ]
     },
     {
       title: 'DevOps & Cloud',
       icon: 'fas fa-cloud',
       skills: [
-        { name: 'AWS Cloud (EC2)', icon: 'fab fa-aws' },
+        { name: 'AWS Cloud (EC2)', useImage: true, imagePath: 'assets/aws.svg' },
         { name: 'uWSGI', useImage: true, imagePath: 'assets/uwsgi.svg' },
         { name: 'Nginx', useImage: true, imagePath: 'assets/nginx.svg' },
-        { name: 'Git', icon: 'fab fa-git-alt' },
+        { name: 'Git', useImage: true, imagePath: 'assets/git.svg' },
         { name: 'GitHub', icon: 'fab fa-github' },
         { name: 'CI/CD (GitLab)', icon: 'fab fa-gitlab' }
       ]

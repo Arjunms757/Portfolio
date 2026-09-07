@@ -21,7 +21,7 @@ export class ExperienceComponent {
       company: 'Travidux Technologies Pvt. Ltd.',
       date: 'Jan 2026 - Present',
       description: [
-        'Spearheaded the deployment of 4 complex enterprise systems, supervising end-to-end product life cycles from initial resource scope to final cloud execution.',
+        'Spearheaded the deployment of 7 complex enterprise systems, supervising end-to-end product life cycles from initial resource scope to final cloud execution.',
         'Collaborated directly with corporate clients to analyze target technical requirements, translating operational problem statements into structured backend designs.',
         'Oversaw software delivery lifecycles by structuring feature timelines, managing sprint workload allocation, and tracking milestones using Agile metrics.',
         'Enforced high-quality code metrics by leading weekly quality audits, verifying software build stability and cross-layer data encryption rules.',
@@ -34,12 +34,12 @@ export class ExperienceComponent {
       company: 'Travidux Technologies Pvt. Ltd.',
       date: 'Nov 2023 - Dec 2025',
       description: [
-        'Architected full-stack enterprise portals scaled for 50 discrete operational branches, optimizing process automated routines to trim system latency metrics by 30%.',
-        'Engineered, validated, and documented 25 internal RESTful web services using Python, securely processing 1,000+ monthly financial network payloads.',
+        'Architected full-stack enterprise portals scaled for 50+ discrete operational branches, optimizing process automated routines to trim system latency metrics by 30%.',
+        'Engineered, validated, and documented 75+ internal RESTful web services using Python, securely processing 5,000+ monthly financial network payloads.',
         'Optimized relational PostgreSQL data models using optimized index strategies and managed an independent memory layer via Redis to boost query speeds by 40%.',
         'Provisioned web servers on AWS cloud infrastructure, defining scalable environment parameters and reducing runtime post-launch configuration friction by 15%.'
       ],
-      tags: ['Python', 'Django', 'PostgreSQL', 'Redis Caching', 'AWS Cloud', 'REST APIs']
+      tags: ['Python', 'Django', 'Angular', 'PostgreSQL', 'Redis Caching', 'AWS Cloud', 'REST APIs']
     },
     {
       title: 'Front-End Developer',

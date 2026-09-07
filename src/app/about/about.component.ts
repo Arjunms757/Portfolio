@@ -29,7 +29,7 @@ export class AboutComponent {
         { name: 'TypeScript', useImage: true, imagePath: 'assets/ts-icon.png' },
         { name: 'JavaScript', icon: 'fab fa-js-square' },
         { name: 'SQL', icon: 'fas fa-database' },
-        { name: 'Linux/Unix', icon: 'fab fa-linux' }
+        { name: 'Linux', icon: 'fab fa-linux' }
       ]
     },
     {
@@ -70,13 +70,15 @@ export class AboutComponent {
       icon: 'fas fa-cloud',
       skills: [
         { name: 'AWS Cloud (EC2)', icon: 'fab fa-aws' },
+        { name: 'uWSGI', useImage: true, imagePath: 'assets/uwsgi.svg' },
+        { name: 'Nginx', useImage: true, imagePath: 'assets/nginx.svg' },
         { name: 'Git', icon: 'fab fa-git-alt' },
         { name: 'GitHub', icon: 'fab fa-github' },
         { name: 'CI/CD (GitLab)', icon: 'fab fa-gitlab' }
       ]
     },
     {
-      title: 'Methodologies & Security',
+      title: 'Engineering Practices',
       icon: 'fas fa-shield-alt',
       skills: [
         { name: 'Agile/Scrum', icon: 'fas fa-users' },

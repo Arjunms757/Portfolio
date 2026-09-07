@@ -1,4 +1,5 @@
 import { Component, HostListener } from '@angular/core';
+import { ContactService } from '../services/contact.service';
 
 @Component({
   selector: 'app-header',
@@ -9,12 +10,24 @@ export class HeaderComponent {
   isScrolled = false;
   menuOpen = false;
 
+  constructor(public contactService: ContactService) {}
+
   @HostListener('window:scroll', [])
-  onWindowScroll() {
+  onWindowScroll(): void {
     this.isScrolled = window.scrollY > 50;
   }
 
-  toggleMenu() {
+  toggleMenu(): void {
     this.menuOpen = !this.menuOpen;
+  }
+
+  openContactModal(event?: Event): void {
+    if (event) {
+      event.preventDefault();
+    }
+    if (this.menuOpen) {
+      this.menuOpen = false;
+    }
+    this.contactService.open();
   }
 }

@@ -3,26 +3,24 @@
     position: relative;
 }
 
+#projects .container {
+    max-width: 1360px;
+}
+
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-    max-width: 1100px;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 28px;
+    max-width: 100%;
     margin: 0 auto;
 }
 
-.project-card:nth-child(3) {
-    grid-column: span 2;
-    max-width: calc(50% - 20px);
-    width: 100%;
-    justify-self: center;
-}
-
 .project-card {
+    grid-column: span 2;
     background: rgba(255, 255, 255, 0.02);
     border: 1px solid var(--glass-border);
     border-radius: 24px;
-    padding: 40px;
+    padding: 38px 32px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -30,6 +28,15 @@
     position: relative;
     overflow: hidden;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* 2nd row with 2 cards perfectly centered */
+.project-card:nth-child(4) {
+    grid-column: 2 / span 2;
+}
+
+.project-card:nth-child(5) {
+    grid-column: 4 / span 2;
 }
 
 .project-card::before {
@@ -48,8 +55,16 @@
     background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
 }
 
+.project-card.crm-project::before {
+    background: linear-gradient(90deg, #a855f7, #6366f1);
+}
+
 .project-card.scheduler-project::before {
     background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
+}
+
+.project-card.hrms-project::before {
+    background: linear-gradient(90deg, #10b981, #06b6d4);
 }
 
 .project-card.react-project::before {
@@ -68,8 +83,16 @@
     box-shadow: 0 15px 35px rgba(0, 255, 136, 0.05), 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
+.project-card.crm-project:hover {
+    box-shadow: 0 15px 35px rgba(168, 85, 247, 0.08), 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
 .project-card.scheduler-project:hover {
     box-shadow: 0 15px 35px rgba(0, 188, 212, 0.05), 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.project-card.hrms-project:hover {
+    box-shadow: 0 15px 35px rgba(16, 185, 129, 0.08), 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .project-card.react-project:hover {
@@ -80,24 +103,32 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 25px;
+    margin-bottom: 22px;
 }
 
 .project-icon-wrapper {
-    width: 55px;
-    height: 55px;
+    width: 50px;
+    height: 50px;
     background: rgba(255, 255, 255, 0.04);
-    border-radius: 16px;
+    border-radius: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.5rem;
+    font-size: 1.35rem;
     color: var(--primary-color);
     border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+.crm-project .project-icon-wrapper {
+    color: #a855f7;
+}
+
 .scheduler-project .project-icon-wrapper {
     color: var(--secondary-color);
+}
+
+.hrms-project .project-icon-wrapper {
+    color: #10b981;
 }
 
 .react-project .project-icon-wrapper {
@@ -105,16 +136,16 @@
 }
 
 .project-type {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     color: var(--text-muted);
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
     font-weight: 600;
 }
 
 .project-card-body h3 {
-    font-size: 1.6rem;
-    margin-bottom: 20px;
+    font-size: 1.45rem;
+    margin-bottom: 18px;
     color: var(--text-light);
     font-weight: 700;
     line-height: 1.3;
@@ -123,16 +154,16 @@
 .project-card-body ul {
     list-style: none;
     padding: 0;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 .project-card-body li {
     position: relative;
-    padding-left: 25px;
-    margin-bottom: 12px;
+    padding-left: 22px;
+    margin-bottom: 10px;
     color: var(--text-muted);
-    font-size: 1rem;
-    line-height: 1.6;
+    font-size: 0.92rem;
+    line-height: 1.55;
 }
 
 .project-card-body li::before {
@@ -143,8 +174,16 @@
     font-weight: bold;
 }
 
+.crm-project .project-card-body li::before {
+    color: #a855f7;
+}
+
 .scheduler-project .project-card-body li::before {
     color: var(--secondary-color);
+}
+
+.hrms-project .project-card-body li::before {
+    color: #10b981;
 }
 
 .react-project .project-card-body li::before {
@@ -153,21 +192,21 @@
 
 .project-card-footer {
     border-top: 1px solid rgba(255, 255, 255, 0.05);
-    padding-top: 25px;
+    padding-top: 20px;
 }
 
 .tech-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 8px;
 }
 
 .tech-tag {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     color: var(--text-light);
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.06);
-    padding: 6px 12px;
+    padding: 5px 10px;
     border-radius: 30px;
     font-family: monospace;
     font-weight: 500;
@@ -179,39 +218,53 @@
     border-color: rgba(255, 255, 255, 0.2);
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1050px) {
     .projects-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
+        gap: 25px;
     }
 
-    .project-card:nth-child(3) {
-        max-width: calc(50% - 15px);
+    .project-card {
+        grid-column: span 1;
+    }
+
+    .project-card:nth-child(4) {
+        grid-column: span 1;
+    }
+
+    .project-card:nth-child(5) {
+        grid-column: span 2;
+        max-width: calc(50% - 12.5px);
+        width: 100%;
+        justify-self: center;
     }
 }
 
 @media (max-width: 768px) {
     .projects-grid {
         grid-template-columns: 1fr;
-        gap: 25px;
+        gap: 20px;
     }
 
-    .project-card:nth-child(3) {
-        grid-column: span 1;
-        max-width: 100%;
+    .project-card,
+    .project-card:nth-child(4),
+    .project-card:nth-child(5) {
+        grid-column: span 1 !important;
+        max-width: 100% !important;
+        justify-self: stretch;
     }
 }
 
 @media (max-width: 576px) {
     .project-card {
-        padding: 30px;
+        padding: 25px 20px;
     }
-    
+
     .project-card-body h3 {
-        font-size: 1.3rem;
+        font-size: 1.25rem;
     }
-    
+
     .project-card-body li {
-        font-size: 0.95rem;
+        font-size: 0.88rem;
     }
 }

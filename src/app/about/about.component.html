@@ -17,7 +17,15 @@
                 <div class="brief-content">
                     <h3>Professional Summary</h3>
                     <p>
-                        Highly analytical Project Delivery Engineer and Full Stack Software Engineer with 3+ years of professional experience architecting, developing, and deploying scalable enterprise web applications. Proven core competency in Backend Engineering using Python, Django, and Django REST Framework (DRF) alongside robust Frontend Development using Angular and React.js. Demonstrated success managing the end-to-end Software Development Lifecycle (SDLC), translating business requirements into technical specifications, and driving cross-functional development sprints. Expert in database optimization using PostgreSQL and Redis, cloud management via AWS Cloud Services, and implementing highly secure software solutions to ensure business continuity and platform stability.
+                        Highly analytical Project Delivery Engineer and Full Stack Software Engineer with 3+ years of
+                        professional experience designing, developing, and deploying scalable enterprise web
+                        applications. Proven expertise in Backend Engineering with Python, Django, and Django REST
+                        Framework (DRF), alongside Frontend Development using Angular and React.js. Experienced in
+                        managing the end-to-end Software Development Lifecycle (SDLC), translating business requirements
+                        into technical solutions, and driving cross-functional development initiatives. Strong
+                        background in PostgreSQL, MySQL, Redis, AWS, RESTful API development, third-party integrations,
+                        and production deployment, with a focus on secure, reliable, and high-performance software
+                        solutions.
                     </p>
                 </div>
             </div>
@@ -25,8 +33,10 @@
             <div class="about-info-card">
                 <h3>More than just code.</h3>
                 <p>
-                    I interpret business problems into technical solutions. With a strong foundation in Computer Science
-                    and full-stack development, I bridge the gap between complex backend logic and intuitive frontend design.
+                    I translate business requirements into practical technical solutions, combining full-stack
+                    development with project delivery experience. With a strong foundation in Computer Science, I bridge
+                    backend engineering, frontend development, and business objectives while driving projects from
+                    requirements through deployment and production support.
                 </p>
 
                 <div class="stats-block">
@@ -59,7 +69,8 @@
                 <div class="category-skills">
                     <div class="skill-badge" *ngFor="let skill of cat.skills">
                         <span class="skill-badge-icon">
-                            <img *ngIf="skill.useImage" [src]="skill.imagePath" [alt]="skill.name" class="img-icon-badge">
+                            <img *ngIf="skill.useImage" [src]="skill.imagePath" [alt]="skill.name"
+                                class="img-icon-badge">
                             <i *ngIf="!skill.useImage" [class]="skill.icon"></i>
                         </span>
                         <span class="skill-badge-name">{{ skill.name }}</span>

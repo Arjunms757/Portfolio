@@ -51,6 +51,17 @@ export class ProjectsComponent {
       colorClass: 'scheduler-project'
     },
     {
+      title: 'Government CMS Platform',
+      type: 'Government & Public Sector CMS',
+      description: [
+        'Architected a secure Content Management System (CMS) for government operations, enabling multi-tier editorial workflows, citizen information delivery, and document publication.',
+        'Engineered high-security RESTful backend APIs in Django with PostgreSQL, integrated with an intuitive, accessible Angular and TypeScript administrative portal.'
+      ],
+      techStack: ['Python', 'Django', 'Angular', 'TypeScript', 'PostgreSQL', 'RESTful APIs'],
+      icon: 'fas fa-landmark',
+      colorClass: 'gov-project'
+    },
+    {
       title: 'HRMS System',
       type: 'Human Resource Management',
       description: [

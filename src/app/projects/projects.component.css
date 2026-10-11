@@ -9,14 +9,13 @@
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 28px;
     max-width: 100%;
     margin: 0 auto;
 }
 
 .project-card {
-    grid-column: span 2;
     background: rgba(255, 255, 255, 0.02);
     border: 1px solid var(--glass-border);
     border-radius: 24px;
@@ -28,15 +27,6 @@
     position: relative;
     overflow: hidden;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-}
-
-/* 2nd row with 2 cards perfectly centered */
-.project-card:nth-child(4) {
-    grid-column: 2 / span 2;
-}
-
-.project-card:nth-child(5) {
-    grid-column: 4 / span 2;
 }
 
 .project-card::before {
@@ -61,6 +51,10 @@
 
 .project-card.scheduler-project::before {
     background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
+}
+
+.project-card.gov-project::before {
+    background: linear-gradient(90deg, #f59e0b, #f97316);
 }
 
 .project-card.hrms-project::before {
@@ -89,6 +83,10 @@
 
 .project-card.scheduler-project:hover {
     box-shadow: 0 15px 35px rgba(0, 188, 212, 0.05), 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.project-card.gov-project:hover {
+    box-shadow: 0 15px 35px rgba(245, 158, 11, 0.08), 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .project-card.hrms-project:hover {
@@ -125,6 +123,10 @@
 
 .scheduler-project .project-icon-wrapper {
     color: var(--secondary-color);
+}
+
+.gov-project .project-icon-wrapper {
+    color: #f59e0b;
 }
 
 .hrms-project .project-icon-wrapper {
@@ -182,6 +184,10 @@
     color: var(--secondary-color);
 }
 
+.gov-project .project-card-body li::before {
+    color: #f59e0b;
+}
+
 .hrms-project .project-card-body li::before {
     color: #10b981;
 }
@@ -223,35 +229,12 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 25px;
     }
-
-    .project-card {
-        grid-column: span 1;
-    }
-
-    .project-card:nth-child(4) {
-        grid-column: span 1;
-    }
-
-    .project-card:nth-child(5) {
-        grid-column: span 2;
-        max-width: calc(50% - 12.5px);
-        width: 100%;
-        justify-self: center;
-    }
 }
 
 @media (max-width: 768px) {
     .projects-grid {
         grid-template-columns: 1fr;
         gap: 20px;
-    }
-
-    .project-card,
-    .project-card:nth-child(4),
-    .project-card:nth-child(5) {
-        grid-column: span 1 !important;
-        max-width: 100% !important;
-        justify-self: stretch;
     }
 }
 
